@@ -1,22 +1,14 @@
-import { Redirect, Route, Switch } from 'react-router';
+import NavBar from './components/NavBar';
 
-import NavBar from './components/Navbar';
-import Home from './Pages/Home';
-import OpenAccount from './Pages/OpenAccount';
-import LoanSection from './Pages/LoanSection';
 import './App.css';
+import Webpages from './Hooks';
 
 
 function App() {
   return (
     <>
     <NavBar/>
-    <Switch>
-      <Route exact path='/' component={Home} />
-      <Route exact path='/openaccount' component={OpenAccount} />
-      <Route exact path='/loansection' component={LoanSection} />
-      <Redirect to='/' />
-    </Switch>
+    <Webpages/>
     </>
   )
 }

@@ -1,7 +1,8 @@
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar'
+import Webpages from './Hooks/index'
 
 import './App.css';
-import Webpages from './Hooks';
+
 
 
 function App() {

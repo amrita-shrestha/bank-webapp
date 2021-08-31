@@ -1,0 +1,38 @@
+.calculator {
+  border-width: 2px;
+  border-style: double;
+  border-color: rgb(69, 150, 16);
+  border-bottom-right-radius: 2.1em;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  width: auto;
+  margin-top: 30px;
+}
+.emi-title {
+    color: rgb(29, 7, 112);
+    background-color: rgb(69, 150, 16);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 1.2em;
+  align-items: center;
+}
+
+.flexable-font {
+  /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  font-size: calc(10px + 30 * ((100vw - 320px) / 680));
+  width: fit-content;
+  /* background-color: rgba(240, 238, 238, 0.692); */
+}
+
+.flexable-font2 {
+  /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  font-size: calc(10px + 10 * ((100vw - 320px) / 680));
+  width: fit-content;
+  background-color: rgba(240, 238, 238, 0.692);
+}
+
+.emi-input {
+    display: block;
+    width: 95%;
+}

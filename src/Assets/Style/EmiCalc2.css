@@ -12,12 +12,15 @@
     /* border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 1.2em; */
 }
+.emi-title h1 {
+  font-size: calc(10px + 20* ((100vw - 320px) / 680));
+}
 .emi-error-msg{
   text-align: center;
 }
-.emi-calculator{
+/* .emi-calculator{
   background-color: aqua;
-}
+} */
 .flexable-font {
   /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
   /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
@@ -33,9 +36,15 @@
 }
 
 .emi-input {
+  border-radius: 1rem;
     display: block;
     width: 95%;
+    text-align: center;
 }
 .mytable>tbody>tr>td, .mytable>tbody>tr>th, .mytable>tfoot>tr>td, .mytable>tfoot>tr>th, .mytable>thead>tr>td, .mytable>thead>tr>th {
   padding: 1px;
+}
+
+.emi-calculate-btn {
+  border-radius: 1rem;
 }

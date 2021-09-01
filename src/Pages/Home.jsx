@@ -9,7 +9,6 @@ import BankServices from '../components/BankServices';
 export default function Home() {
     return (
         <>
-            <section id="home-card " >
                 <div className="container-fluid my-1">
                     <div className="row">
                         <div className="col-lg-12 mx-auto " >
@@ -19,7 +18,6 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
         </>
 
     )

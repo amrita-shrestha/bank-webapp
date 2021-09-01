@@ -91,9 +91,10 @@ function EmiCalculator() {
 
   return (
     // <div className='row calculator flex-row justify-content-center'>
-    <div className="row m-sm-2" style={{ backgroundColor: "#ffcc00" }}>
-      <div className="emi-title d-flex justify-content-center mt-2">
-        <h1 className="flexable-font2 mt-1">EMI Calculator</h1>
+    // style={{ backgroundColor: "#ffcc00" }}
+    <div className="row m-sm-2" >
+      <div className="mt-2 emi-title d-flex justify-content-center">
+        <h1 className=" mt-1">EMI Calculator</h1>
       </div>
       <div className="emi-error-msg text-white" >
         <p className="flexable-font2 p-1">{error}</p>
@@ -133,11 +134,12 @@ function EmiCalculator() {
                 />
               </fieldset>
               <div className="d-flex justify-content-center">
-                <button className="btn btn-success btn-sm flexable-font2" type="submit">Calculate</button>
+                <button className="btn btn-success btn-sm emi-calculate-btn flexable-font2" type="submit">Calculate</button>
               </div>
             </div>
           ) : (
-            <div className="form-items row" style={{ backgroundColor: "#ff11aa" }}>
+            // <div className="form-items row" style={{ backgroundColor: "#ff11aa" }}>
+            <div className="form-items row" >
               
               <div>
                 <label id='label' className="emi-item flexable-font2">Loan amount</label>
@@ -151,8 +153,10 @@ function EmiCalculator() {
                 <label className="emi-item flexable-font2" id='label'>Years to repay</label>
                 <input className="emi-input mx-sm-2 flexable-font2" type='text' value={userValues.years} disabled />
               </div>
-              <div className="col-12" style={{ backgroundColor: "#a44" }}>
-                <table className="table table-sm table-borderless mytable mb-0" style={{ backgroundColor: "#ddaa" }}>
+              {/* <div className="col-12" style={{ backgroundColor: "#a44" }}> */}
+              <div className="col-12">
+                <table className="table table-sm table-borderless mytable mb-0">
+                {/* style={{ backgroundColor: "#ddaa" }} */}
                   <tbody>
                     <tr className="table-rows">
                       <td className="flexable-font2 table-rows">Monthly Payment</td>

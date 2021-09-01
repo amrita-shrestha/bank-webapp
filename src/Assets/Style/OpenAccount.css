@@ -1,0 +1,28 @@
+.status-message {
+    opacity: 0;
+  }
+  .success {
+    opacity: 1;
+    color: green;
+  }
+  .failure {
+    opacity: 1;
+    color: red;
+  }
+  
+  .open-account-header-font {
+    /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size:calc(10px + 20 * ((180vw - 360px) / 640));
+    background-color:#33dd16;
+    border-radius: 1rem;
+  }
+  .open-account-input-font {
+    /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size:calc(10px + 10 * ((70vw - 250px)/ 520));
+  }
+
+  .round-btn{
+    border-radius: 2rem;
+  }

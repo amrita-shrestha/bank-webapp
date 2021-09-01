@@ -1,11 +1,28 @@
 .status-message {
-    opacity: 0;
-  }
-  .success {
-    opacity: 1;
-    color: green;
-  }
-  .failure {
-    opacity: 1;
-    color: red;
-  }
+  opacity: 0;
+}
+.success {
+  opacity: 1;
+  color: green;
+}
+.failure {
+  opacity: 1;
+  color: red;
+}
+
+.loan-section-header-font {
+  /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  font-size:calc(15px + 20 * ((180vw - 320px) / 680));
+  background-color:  #33dd16;
+  border-radius: 2rem;
+}
+.loan-section-input-font {
+  /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  font-size:calc(10px + 10 * ((70vw - 250px)/ 520));
+}
+
+.round-btn{
+  border-radius: 2rem;
+}

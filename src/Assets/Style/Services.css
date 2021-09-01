@@ -1,0 +1,25 @@
+.service-text{
+    background-color: rgb(69, 150, 16);
+    color: rgb(29, 7, 112);
+    border: none;
+    font-size: calc(8px + 20 * ((100vw - 320px) / 680));
+}
+.flexable-font {
+    /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    /* font-size: calc(8px + 2 * ((100vw - 320px) / 680)); */
+    font-size: calc(10px + 10 * ((100vw - 320px) / 680));
+    width: fit-content;
+    /* background-color: rgba(240, 238, 238, 0.692); */
+  }
+
+ .service-title{
+    font-style: italic;
+    
+ }
+ .service-image{
+     max-height: 120px;
+     min-height: 50px;
+     width: 100%;
+    
+ }

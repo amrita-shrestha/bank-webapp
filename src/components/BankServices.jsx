@@ -4,9 +4,8 @@ import Services from './Services';
 export default function BankServices() {
     return (
         <>
-            <div className="row home-servicesecond m-1">
-
-                <div className="col-6 emi-section" style={{backgroundColor:"beige"}}>
+            <div className="row home-servicesecond" style={{backgroundColor:"rgb(69, 150, 16)"}}>
+                <div className="col-6 " style={{backgroundColor:"rgb(56,34,56)"}}>
                     <EmiCalculator />
                 </div>
                 <div className="col-6">

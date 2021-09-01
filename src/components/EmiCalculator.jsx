@@ -46,9 +46,7 @@ function EmiCalculator() {
       setError('');
       calculateResults(userValues);
     }
-    else{
-      let errorMsg = "visible"
-    }
+
   };
 
   const calculateResults = ({ amount, interest, years }) => {
@@ -92,19 +90,19 @@ function EmiCalculator() {
   };
 
   return (
-    <div className='row calculator flex-row justify-content-center'>
-
-      <div className="emi-title d-flex justify-content-center">
-        <h1 className="flexable-font px-3">EMI Calculator</h1>
+    // <div className='row calculator flex-row justify-content-center'>
+    <div className="row m-sm-2" style={{ backgroundColor: "#ffcc00" }}>
+      <div className="emi-title d-flex justify-content-center mt-2">
+        <h1 className="flexable-font2 mt-1">EMI Calculator</h1>
       </div>
-      <div className="emi-error-msg" >
-        <p className="flexable-font2">{error}</p>
+      <div className="emi-error-msg text-white" >
+        <p className="flexable-font2 p-1">{error}</p>
       </div>
-      <div className="emi-calculator m-1">
+      <div className="emi-calculator">
         <form onSubmit={handleSubmitValues} id="emi-form">
           {!results.isResult ? (
             <div className="emi-form-items flex-row ">
-              <fieldset className="row">
+              <fieldset >
                 <legend className="emi-item flexable-font2 ">Loan Amount</legend>
                 <input className="emi-input mb-2 mx-sm-2 flexable-font2"
                   type='text'
@@ -114,7 +112,7 @@ function EmiCalculator() {
                   onChange={handleInputChange}
                 />
               </fieldset >
-              <fieldset className="row">
+              <fieldset >
                 <legend className="emi-item flexable-font2">Interest </legend>
                 <input className="emi-input mb-2 mx-sm-2 flexable-font2"
                   type='text'
@@ -124,9 +122,9 @@ function EmiCalculator() {
                   onChange={handleInputChange}
                 />
               </fieldset>
-              <fieldset className="row">
+              <fieldset >
                 <legend className="emi-item flexable-font2">Paying Period</legend>
-                <input className="emi-input mb-2 mx-sm-2 flexable-font2" 
+                <input className="emi-input mb-2 mx-sm-2 flexable-font2"
                   type='text'
                   name='years'
                   placeholder='Years to repay'
@@ -134,32 +132,46 @@ function EmiCalculator() {
                   onChange={handleInputChange}
                 />
               </fieldset>
-              <input type='submit' className='button' />
+              <div className="d-flex justify-content-center">
+                <button className="btn btn-success btn-sm flexable-font2" type="submit">Calculate</button>
+              </div>
             </div>
           ) : (
-            <div className='form-items'>
-              <h4 className="flexable-font2">
-                Loan amount: {userValues.amount} <br /> Interest:{' '}
-                {userValues.interest}% <br /> Years to repay: {userValues.years}
-              </h4>
+            <div className="form-items row" style={{ backgroundColor: "#ff11aa" }}>
+              
               <div>
-                <label id='label' className="emi-item flexable-font2">Monthly Payment:</label>
-                <input className="emi-input mb-2 mx-sm-2 flexable-font2"  type='text' value={results.monthlyPayment} disabled />
+                <label id='label' className="emi-item flexable-font2">Loan amount</label>
+                <input className="emi-input  mx-sm-2 flexable-font2" type='text' value={userValues.amount} disabled />
               </div>
               <div>
-                <label className="emi-item flexable-font2" id='label'>Total Payment: </label>
-                <input className="emi-input mb-2 mx-sm-2 flexable-font2" type='text' value={results.totalPayment} disabled />
+                <label className="emi-item flexable-font2" id='label'>Interest </label>
+                <input className="emi-input mx-sm-2 flexable-font2" type='text' value={userValues.interest} disabled />
               </div>
               <div>
-                <label className="emi-item flexable-font2" id='label'>Total Interest:</label>
-                <input className="emi-input mb-2 mx-sm-2 flexable-font2"  type='text' value={results.totalInterest} disabled />
+                <label className="emi-item flexable-font2" id='label'>Years to repay</label>
+                <input className="emi-input mx-sm-2 flexable-font2" type='text' value={userValues.years} disabled />
               </div>
-              <input
-                className='button'
-                value='Calculate again'
-                type='button'
-                onClick={clearFields}
-              />
+              <div className="col-12" style={{ backgroundColor: "#a44" }}>
+                <table className="table table-sm table-borderless mytable mb-0" style={{ backgroundColor: "#ddaa" }}>
+                  <tbody>
+                    <tr className="table-rows">
+                      <td className="flexable-font2 table-rows">Monthly Payment</td>
+                      <td className="flexable-font2">{results.monthlyPayment}</td>
+                    </tr>
+                    <tr className="table-rows" >
+                      <td className="flexable-font2">Total Payment</td>
+                      <td className="flexable-font2">{results.totalPayment}</td>
+                    </tr>
+                    <tr className="table-rows">
+                      <td className="flexable-font2">Total Interest</td>
+                      <td className="flexable-font2">{results.totalInterest}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="d-flex justify-content-center">
+                <button className="btn btn-success btn-sm flexable-font2" onClick={clearFields} type="submit">Calculate</button>
+              </div>
             </div>
           )}
         </form>

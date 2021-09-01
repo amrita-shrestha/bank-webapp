@@ -1,44 +1,46 @@
 import React from 'react';
 import loanimage from '../Assets/images/loan.jpg';
-import backgroundcolorPrimary from '../Assets/Color'
+import '../Assets/Style/Services.css';
 
 export default function Services() {
     return (
         <>
-          <div className="row">
-                    <div className="service mt-2" style={backgroundcolorPrimary}>
-                        <h1 className="card text-center" style={{ backgroundColor: '#2CD62C', border: "none" }}>Our Services</h1>
+            <div className="row" style={{ backgroundColor: "#ffcc00" }}>
+                <div className=" mt-2 d-flex justify-content-center mt-2" style={{ backgroundColor: "#ff2400" }}>
+                    <h1 className="card  service-text mt-1">Our Services</h1>
+                </div>
+                <div class="container mt-3 pt-2" style={{ backgroundColor: "#aa3300" }}>
+                    <div class="row row-cols-2 g-1">
+                        <div class="col">
+                            <div class=" border bg-light">
+                                <img src={loanimage} className="img-fluid service-image" alt="..." />
+                                <div className="d-flex justify-content-center">
+                                    <h5 className="flexable-font service-title">Deposite</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class=" border bg-light">
+                                <div className="service-card">
+                                    <img src={loanimage} className="img-fluid service-image" alt="..." />
+                                    <div className="d-flex justify-content-center">
+                                        <h5 className="service-title  flexable-font">Loan</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="border bg-light">
+                                <img src={loanimage} className="img-fluid service-image" alt="..." />
+                                <div className="d-flex justify-content-center">
+                                <h5 className="service-title flexable-font">Remittance</h5></div>
+                                </div>
+                        </div>
+
                     </div>
-                    <div className="row row-cols-1 row-cols-md-3 g-4">
-                        <div className="col">
-                            <div className="card">
-                                <img src={loanimage} className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <h5 className="card-title">Deposite</h5>
-                                    <p className="card-text">We offer different type of saving.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col">
-                            <div className="card">
-                                <img src={loanimage} className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <h5 className="card-title">Loan</h5>
-                                    <p className="card-text">We provide loan for different sector.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col">
-                            <div className="card">
-                                <img src={loanimage} className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <h5 className="card-title">Remittance</h5>
-                                    <p className="card-text">Get money from any part of the world.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
+                </div>
+
+            </div>
         </>
     )
 }
